@@ -1,0 +1,153 @@
+.profile {
+    max-width: 120px;
+    position: relative;
+}
+
+.imgProfile {
+    margin-top:30%;
+    position: absolute;
+    left: 50%;
+    color: $Spray-color;
+}
+
+.imgProfile:hover {
+    color: $Charlotte-color;
+}
+
+.textProfile {
+    position: relative;
+    left: 60%;
+    top:190px;
+    font-family: 'Numans', sans-serif;
+    color: $Spray-color;
+}
+
+.sidebar-wrapper {
+    z-index: 1;
+    position: absolute;
+    width: 0;
+    height: 100%;
+    overflow-y: hidden;
+    background: linear-gradient($Shakespeare-color, $SanMarino-color);
+    //border: 2px solid $SanMarino-color;
+    opacity: 0.9;   
+}
+
+.page-content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 15px;
+    //border: 2px solid $Spray-color;
+}
+
+.sidebar-nav {
+    margin-top: 50%;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    top: 30%;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li:hover {
+    background: $SanMarino-color;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: $Spray-color;
+    position: relative;
+}
+
+.active {
+    //border-radius: 10px 10px 10px 10px;
+    background: $SanMarino-color !important;
+    opacity: 1;
+    border-bottom: 1px solid $Charlotte-color;
+    border-top: 1px solid $Charlotte-color;
+}
+
+.sidebar-nav, .submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav li:hover .submenu {
+    display: block;
+    max-height: 200px;
+}
+
+.submenu {
+    overflow: hidden;
+    max-height: 0;
+    // -webkit-transition: all 0.5s ease-out;
+}
+
+.submenu a {
+    background-color: $Shakespeare-color;
+    padding-left: 30px;
+}
+
+.submenu a:hover {
+    background-color: $SanMarino-color;
+}
+
+.collapsible-menu {
+    display: none;
+    background: linear-gradient($Shakespeare-color, $SanMarino-color);
+    padding: 0px 30px;
+    border-bottom: 3px;
+    box-shadow: 1px 2px 3px;
+}
+
+.expand-icon {
+    margin-top: 2%;
+    position: relative;
+    left: 2%;
+    color: $Spray-color;
+}
+
+.menu-content { 
+    padding: 0 0 0 50px;
+}
+
+.collapsible-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+.collapsible-menu a {
+    padding: 10px;
+    text-decoration: none;
+}
+
+.menu-content a {
+    background-color: $Shakespeare-color;
+    padding-left: 30px;
+}
+
+.menu-content a:hover {
+    background-color: $SanMarino-color;
+}
+
+@media only screen and (min-width: 900px) {
+    .sidebar-wrapper {
+      width: 250px;
+    }
+    .page-content {
+        //padding-left: 250px;
+        left: 250px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .collapsible-menu {
+        display: block;
+    }
+}
