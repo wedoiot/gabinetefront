@@ -6,7 +6,7 @@
 .imgProfile {
     margin-top:30%;
     position: absolute;
-    left: 50%;
+    left: 11vh;
     color: $Spray-color;
 }
 
@@ -16,7 +16,7 @@
 
 .textProfile {
     position: relative;
-    left: 60%;
+    left: 11vh;
     top:190px;
     font-family: 'Numans', sans-serif;
     color: $Spray-color;
@@ -138,11 +138,12 @@
 
 @media only screen and (min-width: 900px) {
     .sidebar-wrapper {
-      width: 250px;
+      width: 18vw;
     }
     .page-content {
         //padding-left: 250px;
-        left: 250px;
+        left: 18vw;
+        width: 100vw - 18vw;
     }
 }
 

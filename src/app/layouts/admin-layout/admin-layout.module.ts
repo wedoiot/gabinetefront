@@ -5,8 +5,10 @@ import { AdminLayoutRoutes } from './admin-layout.routing';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {HttpClientModule} from '@angular/common/http';
 import { AuthGuardService as AuthGuard} from '../../generic/security/login/shared/auth-guard.service';
-import { UserComponent } from 'src/app/generic/security/user/user.component';
 import { FormsModule } from '@angular/forms';
+import { UserModule } from 'src/app/generic/configurations/user/user.module';
+import {DataTableModule} from "angular-6-datatable";
+import {NgxPaginationModule} from 'ngx-pagination';
 //import { SharedModule } from '../../shared/shared.module';
 //import { NgxLoadingModule } from 'ngx-loading';
 
@@ -18,11 +20,13 @@ import { FormsModule } from '@angular/forms';
     NgbModule,
     HttpClientModule,
     FormsModule,
+    UserModule,
     //NgxLoadingModule.forRoot({}),
+    NgxPaginationModule,
+    DataTableModule,
 
   ],
   declarations: [
-    UserComponent
   ],
   exports:[
   ],

@@ -8,6 +8,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import {HttpClientModule} from '@angular/common/http';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { UserComponent } from '../generic/security/user/user.component';
+import { FormsModule } from '@angular/forms';
+import { UserService } from '../generic/security/user/shared/user.service';
 
 @NgModule({
   imports: [
@@ -16,16 +18,20 @@ import { UserComponent } from '../generic/security/user/user.component';
     NgbModule,
     HttpClientModule,
     AngularFontAwesomeModule,
+    FormsModule
   ],
   declarations: [
     FooterComponent,
     SidebarComponent,
+    UserComponent 
   ],
   exports: [
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    UserComponent
   ],
   providers:[
+    UserService
   ]
 })
 export class ComponentsModule { }

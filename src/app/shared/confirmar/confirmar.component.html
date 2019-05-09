@@ -1,0 +1,7 @@
+<ng-template #template>
+    <div class="modal-body text-center">
+        <p>{{mensaje}}</p>
+        <button type="button" class="btn btn-info" (click)="decline()">{{cancelar||'Cancelar'}}</button>
+        <button type="button" class="btn btn-warning" (click)="confirm()">{{aceptar||'Aceptar'}}</button>
+    </div>
+</ng-template>

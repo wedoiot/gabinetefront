@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { ComponentsModule } from './components/components.module';
 import { ForgotPasswordComponent } from './generic/security/forgotpassword/forgotpassword.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ForgotPasswordComponent } from './generic/security/forgotpassword/forgo
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     CommonModule,
     FormsModule,
     AppRoutingModule,

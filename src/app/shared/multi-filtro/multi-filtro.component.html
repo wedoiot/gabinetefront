@@ -1,0 +1,25 @@
+<div class="card card-default" [@flyInOut]="'in'">
+    <div class="card-header">
+            <h4 class="card-title">Filtro</h4>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <ng-container *ngFor="let campo of campos">
+                <div class="form-group col-sm-3">
+                    <label>{{campo.Nombre}}: </label>
+                    <select *ngIf="campo.Tipo=='Lista'"
+                        [(ngModel)]="campo.Valor" class="form-control">
+                        <option *ngFor="let item of campo.Opciones" [value]="item.Value">
+                                {{item.Label}}
+                        </option>
+                    </select>
+                    <input *ngIf="campo.Tipo!='Lista'" [(ngModel)]="campo.Valor" [name]="campo.Id" class="form-control" />
+                </div>
+            </ng-container>
+        </div>
+        <div class="pull-right">
+            <button type="button" class="btn btn-clear" (click)="limpiar()">Limpiar</button>
+            <button type="button" class="btn btn-filter" (click)="filtrar()">Filtrar</button>
+        </div>
+    </div>
+</div>

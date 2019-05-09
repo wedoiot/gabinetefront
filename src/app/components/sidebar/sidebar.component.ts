@@ -99,6 +99,7 @@ export class SidebarComponent implements OnInit {
     }
 
     open(content) {
+        this.modalService.dismissAll();
         this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
             this.closeResult = `Closed with: ${result}`;
         }, (reason) => {
