@@ -12,21 +12,19 @@
             </span>
         </div>
         <ul class='sidebar-nav'>
-            <li [routerLinkActive]="['active']" [routerLink]="['/permisos']"><a>Account</a></li>
-            <li [routerLinkActive]="['active']" [routerLink]="['/permisos2']"><a>Settings</a></li>
-            <li><a>Logout</a></li>
             <li [routerLinkActive]="['active']"><a>Configurations</a>
                 <ul class='submenu'>
                     <li><a [routerLinkActive]="['active']" [routerLink]="['/configurations/user/userlist']">Users</a></li>
                 </ul>
             </li>
-            <li [routerLinkActive]="['active']"><a>Products</a>
+            <!--<li [routerLinkActive]="['active']"><a>Products</a>
                 <ul class='submenu'>
                     <li><a [routerLinkActive]="['active']" [routerLink]="['/permisos3']">Product 1</a></li>
                     <li><a [routerLinkActive]="['active']" [routerLink]="['/permisos2']">Product 2</a></li>
                     <li><a>Product 3</a></li>
                 </ul>
-            </li>
+            </li>-->
+            <li (click)="closeSession()"><a>Logout</a></li>
         </ul>
     </div>
 

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { identity } from 'rxjs';
 import { isNullOrUndefined } from 'util';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { LoginService } from 'src/app/generic/security/login/shared/login.service';
+import { Router } from '@angular/router';
 
 declare interface RouteInfo {
     path: string;
@@ -62,15 +64,15 @@ export const RoutesFather: RouteInfoFather[] = [
     styleUrls: ['./sidebar.component.scss'],
 })
 export class SidebarComponent implements OnInit {
-    isModifyUserProfile: boolean = false;
     menuItems: any[];
     menuItemsSingle: any[];
-    itemActual = null;
-    token: null;
-    identity;
+
     closeResult: string;
 
-    constructor(private modalService: NgbModal) { }
+    constructor(
+        private modalService: NgbModal,
+        private _loginService: LoginService,
+        private _router: Router) { }
 
     ngOnInit() {
         this.menuItemsSingle = ROUTES.filter(menuItem => menuItem);
@@ -89,15 +91,6 @@ export class SidebarComponent implements OnInit {
         return true;
     };
 
-    activarItem(item) {
-        this.itemActual = item;
-    };
-
-    modifyUserProfile() {
-        console.log('entro a modificar')
-        this.isModifyUserProfile = !this.isModifyUserProfile;
-    }
-
     open(content) {
         this.modalService.dismissAll();
         this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
@@ -115,5 +108,10 @@ export class SidebarComponent implements OnInit {
         } else {
             return `with: ${reason}`;
         }
+    }
+
+    closeSession(){
+        this._loginService.closeSession();
+        this._router.navigate(['login']);
     }
 }

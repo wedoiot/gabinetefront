@@ -12,7 +12,7 @@ export class LoginService {
     private url:any;
     private server:string;
     constructor(public _http: HttpClient) {
-        this.url = GLOBAL.User;
+        this.url = GLOBAL.Auth;
         this.server = GLOBAL.server;
     }
 
@@ -45,5 +45,17 @@ export class LoginService {
             this.token = null;
         }
         return this.token;
+    }
+
+    isTokenValid():Observable<any>{
+        let headers = new HttpHeaders()
+                                    .set('Content-Type', 'application/json')
+                                    .set('Authorization', this.getToken());
+
+        return this._http.get(`${this.server}${this.url.IsTokenValid}`,{ headers: headers});
+    }
+
+    closeSession(){
+        localStorage.clear();
     }
 }
