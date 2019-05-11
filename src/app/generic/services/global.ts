@@ -10,5 +10,6 @@ export var GLOBAL = {
         Modify:"user/modify",
         UserByToken:"user/getUserByToken",
         Users:"user/getAllUsers",
+        Roles:"role/getRoles",
     }
 }

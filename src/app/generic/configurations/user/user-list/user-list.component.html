@@ -5,7 +5,7 @@
         <div class="card">
             <div class="card-header">
                 <h4 class="card-title"> Usuarios
-                    <i class="pull-right fa fa-user-plus" (click)="variable()"></i>
+                    <i class="pull-right fa fa-user-plus" [routerLink]="['/configurations/users/create']"></i>
                 </h4>
             </div>
             <div class="table-responsive">
@@ -30,7 +30,8 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor='let user of mf.data' class="{{user.class}}">
+                        <tr *ngFor='let user of mf.data' class="{{user.class}}" 
+                        [routerLink]="['/configurations/users/edit', user._id]">
                             <td>{{user.name}}</td>
                             <td>{{user.surname}}</td>
                             <td>{{user.username}}</td>

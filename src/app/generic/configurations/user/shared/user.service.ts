@@ -24,4 +24,11 @@ export class UserService {
                                     .set('Authorization', this._login.getToken());
         return this._http.get(`${this.server}${this.url.Users}`, { headers:headers});
     }
+
+    getAllRoles():Observable<any>{
+        let headers = new HttpHeaders()
+                                    .set('Content-Type', 'application/json')
+                                    .set('Authorization', this._login.getToken());
+        return this._http.get(`${this.server}${this.url.Roles}`, { headers:headers});
+    }
 }

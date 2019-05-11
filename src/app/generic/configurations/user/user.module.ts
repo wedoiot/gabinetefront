@@ -10,9 +10,16 @@ import { DataTableModule } from "angular-6-datatable";
 import { NgxPaginationModule } from "ngx-pagination";
 import { MultiFiltroModule } from "src/app/shared/multi-filtro/multi-filtro.module";
 import { UserService } from "../../security/user/shared/user.service";
+import { UserComponent } from "./user/user.component";
+import { UserEditGuard } from "./user/user-edit-guard.service";
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 
 const routes: Routes = [
-    { path: 'user/userlist', component: UserListComponent },
+    { path: 'users', component: UserListComponent },
+    { path: 'users/create', component: UserComponent},
+    { path: 'users/edit/:id', component: UserComponent}
+    //CONFIGURAR EL USER EDIT GUARD PARA MANEJAR STRING 
+    //{ path: 'users/edit/:id', canActivate: [UserEditGuard], component: UserComponent}
 
 ];
 
@@ -28,15 +35,18 @@ const routes: Routes = [
         DataTableModule,
         NgxPaginationModule,
         MultiFiltroModule,
+        NgMultiSelectDropDownModule.forRoot(),
     ],
     declarations: [
-        UserListComponent
+        UserListComponent,
+        UserComponent
     ],
     exports: [
         RouterModule,
     ],
     providers: [
-        UserService
+        UserService,
+        UserEditGuard
     ]
 })
 export class UserModule { }
