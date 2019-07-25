@@ -1,0 +1,110 @@
+@import "../../../assets/scss/styles.scss";
+@import url('https://fonts.googleapis.com/css?family=Numans');
+/*
+.wrapper {
+    background: linear-gradient($Shakespeare-color, $SanMarino-color);
+    min-width: 100px;
+    max-width: 300px;
+    min-height: 100vh;
+    //overflow: auto;
+    z-index: 4;
+    transition: 0.5s;
+    overflow-x: hidden;
+}
+
+.profile {
+    max-width: 150px;
+    position: relative;
+}
+
+.imgProfile {
+    margin-top:30%;
+    position: absolute;
+    left: 60%;
+    color: $Spray-color;
+}
+
+.textProfile {
+    position: relative;
+    left: 60%;
+    top:190px;
+    font-family: 'Numans', sans-serif;
+    color: $Spray-color;
+}
+
+.nav {
+    margin-top:100%;
+    font-size: 130%;
+    font-family: 'Numans', sans-serif;
+}
+
+a > i {
+    color:$Spray-color;
+    left:10%;
+    position: relative;
+}
+a > span {
+    color:$Spray-color;
+    left:15%;
+    position: relative;
+}
+li {
+    min-width: 250px;
+    max-width: 280px;
+    margin-top: 2%;
+}
+.nav :hover {
+    background: $Charlotte-color;
+    opacity: 1;
+    border-radius: 10px 10px 10px 10px;
+    //max-width: 280px;
+    //display: inline;
+}
+.nav a > span:hover {
+    color: $SanMarino-color;
+}
+.nav a:hover > i {
+    color: $SanMarino-color;
+}
+.active {
+    border-radius: 10px 10px 10px 10px;
+    background: $Charlotte-color !important;
+    opacity: 1;
+}
+
+.active a > span  {
+    color: $SanMarino-color;
+}
+
+.active a > i {
+    color: $SanMarino-color;
+}
+
+.submenu li {
+    padding-left: 25px;
+}
+
+ul li > .submenu {
+    display: none;
+    bottom: 65%;
+    position: relative;
+}
+
+ul li > .submenu li > a > span {
+    font-size: 20px !important;
+    color:$SanMarino-color;
+}
+
+ul li > .submenu .active {
+    display: block;
+    list-style: none;
+}
+
+@media only screen and (max-width: 900px) {
+    .wrapper {
+      visibility: collapse;
+    }
+}
+
+*/
+
